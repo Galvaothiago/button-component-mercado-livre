@@ -1,0 +1,83 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #feea7a;
+}
+
+@keyframes transformButton {
+	0% {
+		width: 100%;
+		border-radius: 5px;
+	}
+
+	30% {
+		border-radius: 5px;
+	}
+
+	50% {
+		border-radius: 25%;
+	}
+
+	70% {
+		width: 4rem;
+		border-radius: 50%;
+	}
+
+	100% {
+		width: 4rem;
+		border-radius: 50%;
+		background-color: #00a64f;
+	}
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0.75rem;
+	background-color: #feea7a;
+
+	position: relative;
+}
+
+.container > button {
+	max-width: 600px;
+	width: 100%;
+	height: 4rem;
+	background-color: #3483fc;
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: bold;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+
+	position: relative;
+}
+
+.container .container-loading {
+	width: 0%;
+	height: 100%;
+	background-color: #1f3c688e;
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: bold;
+	border-radius: 5px 0 0 5px;
+	border: none;
+	cursor: pointer;
+
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	z-index: 1;
+	transition: width 0.1s ease-in-out;
+}
